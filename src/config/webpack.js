@@ -14,7 +14,7 @@ export function processWebpackConfig({pluginConfig, report, userConfig}) {
     copy,
     debug,
     define,
-    extractText,
+    extractCSS,
     hoisting,
     html,
     install,
@@ -186,18 +186,18 @@ export function processWebpackConfig({pluginConfig, report, userConfig}) {
     }
   }
 
-  // extractText
-  if ('extractText' in userConfig.webpack) {
-    let configType = typeOf(extractText)
+  // extractCSS
+  if ('extractCSS' in userConfig.webpack) {
+    let configType = typeOf(extractCSS)
     let help = `Must be ${chalk.cyan('false')} (to disable CSS extraction) or ` +
-               `an ${chalk.cyan('Object')} (to configure ExtractTextPlugin)`
+               `an ${chalk.cyan('Object')} (to configure MiniCssExtractPlugin)`
     if (configType === 'boolean') {
-      if (extractText !== false) {
-        report.error('webpack.extractText', extractText, help)
+      if (extractCSS !== false) {
+        report.error('webpack.extractCSS', extractCSS, help)
       }
     }
     else if (configType !== 'object') {
-      report.error('webpack.extractText', `type: ${configType}`, help)
+      report.error('webpack.extractCSS', `type: ${configType}`, help)
     }
   }
 

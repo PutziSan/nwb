@@ -116,8 +116,8 @@ describe('processUserConfig()', () => {
     it('webpack.define is not an object', () => {
       check({webpack: {define: []}}, 'webpack.define', /Must be/)
     })
-    it('webpack.extractText is an invalid type', () => {
-      check({webpack: {extractText: /test/}}, 'webpack.extractText', /Must be/)
+    it('webpack.extractCSS is an invalid type', () => {
+      check({webpack: {extractCSS: /test/}}, 'webpack.extractCSS', /Must be/)
     })
     it('webpack.hoisting is not a boolean', () => {
       check({webpack: {hoisting: /test/}}, 'webpack.hoisting', /Must be/)
