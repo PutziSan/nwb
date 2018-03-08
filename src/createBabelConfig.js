@@ -180,6 +180,16 @@ export default function createBabelConfig(
     plugins.push([require.resolve('babel-plugin-lodash'), {id: cherryPick}])
   }
 
+  /** CUSTOM_CHANGES START **/
+  plugins.push([
+    require.resolve('babel-plugin-react-intl-auto'),
+    {
+      removePrefix: true,
+      filebase: false, // schließt sich sowieso aus...
+    },
+  ])
+  /** CUSTOM_CHANGES END **/
+
   if (plugins.length > 0) {
     config.plugins = plugins
   }
