@@ -1,7 +1,7 @@
 {
   "name": "apoly-nwb",
   "description": "A toolkit for React, Preact & Inferno apps, React libraries and other npm modules for the web, with no configuration (until you need it)",
-  "version": "0.21.5-forked.1",
+  "version": "0.21.5-forked.2",
   "license": "MIT",
   "author": "Jonny Buchanan <jonathan.buchanan@gmail.com>",
   "bin": {
@@ -38,6 +38,7 @@
     "babel-plugin-inferno": "4.0.0",
     "babel-plugin-istanbul": "4.1.5",
     "babel-plugin-lodash": "3.2.11",
+    "babel-plugin-react-intl-auto": "^1.1.0",
     "babel-plugin-react-transform": "3.0.0",
     "babel-plugin-syntax-dynamic-import": "6.18.0",
     "babel-plugin-syntax-jsx": "6.18.0",
